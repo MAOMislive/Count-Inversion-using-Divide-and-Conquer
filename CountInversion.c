@@ -1,9 +1,8 @@
-
 #include <stdio.h>
 
-int N; ///Globally declaring no of elements in the array
+int N; ///Globally declaring the number of elements in the array
 
-int countInv(int arr[], int start, int end)  /// a shortcut function to count inversions
+int countInv(int arr[], int start, int end)  /// A shortcut function to count inversions
 {
     int count =0;
 
@@ -31,13 +30,13 @@ int merge(int arr[], int low, int mid, int high) /// Merging two arrays
     {
         if(arr[i] <= arr[j])
         {
-            temp[k++] = arr[i++]; //count += ((mid+1)- i); ///count as for descending order
+            temp[k++] = arr[i++]; //count += ((mid+1)- i); //count as for descending order
         }
 
         if(arr[j] <= arr[i])
         {
             temp[k++] = arr[j++];
-            count += ((mid+1)- i); ///counting for ascending order
+            count += ((mid+1)- i); //counting for ascending order
         }
     }
 
@@ -54,16 +53,16 @@ int merge(int arr[], int low, int mid, int high) /// Merging two arrays
 }
 
 
-int MergeSort(int arr[], int low, int high)
+int MergeSort(int arr[], int low, int high) ///A function which runs merge sort(a divide and conquer Approach)
 {
     int mid;
     int count = 0;
     if(low != high)
     {
         mid=(low+high)/2;
-        count += MergeSort(arr, low, mid); ///Recursively sending up to mid elements to same function
-        count += MergeSort(arr, mid+1, high); ///Recursively sending up mid+1 to last elements to same function
-        count += merge(arr, low, mid, high); ///Calling merge functions to merge the two arrays
+        count += MergeSort(arr, low, mid); //Recursively sending up to mid elements to same function
+        count += MergeSort(arr, mid+1, high); //Recursively sending up mid+1 to last elements to same function
+        count += merge(arr, low, mid, high); //Calling merge functions to merge two arrays
     }
     return count;
 }
@@ -72,21 +71,21 @@ void main()
 {
     int n;
     printf("Enter the size of the array: ");
-    scanf("%d", &n);
+    scanf("%d", &n); ///Scanning the number of element of the array
 
     N = n;
 
-    int arr[n];
-    printf("Enter the unsorted element: ");
+    int arr[n]; 
+    printf("Enter the unsorted element: "); 
 
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)  ///Scanning the elements of the array
         scanf("%d", &arr[i]);
 
-    int count = MergeSort(arr, 0, n-1); ///DivAndCon is a function which runs merge sort(a divide and conquer process)
+    int count = MergeSort(arr, 0, n-1); ///MergeSort is a function which runs merge sort(a divide and conquer Approach)
     
     printf("\nPrinting the sorted array: "); ///Printing the array in ascending order
     for(int i = 0; i < n; i++)
         printf("%d ", arr[i]);
     
-    printf("\nThe count inversion : %d", count);
+    printf("\nThe count inversion : %d", count); ///Printing the number of Count Inversions
 }
