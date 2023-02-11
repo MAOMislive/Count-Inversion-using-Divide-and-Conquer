@@ -84,7 +84,7 @@ void main()
 
     int count = MergeSort(arr, 0, n-1); ///DivAndCon is a function which runs merge sort(a divide and conquer process)
     
-    printf("\nPrinting the sorted array: ");
+    printf("\nPrinting the sorted array: "); ///Printing the array in ascending order
     for(int i = 0; i < n; i++)
         printf("%d ", arr[i]);
     
