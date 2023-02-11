@@ -83,6 +83,10 @@ void main()
         scanf("%d", &arr[i]);
 
     int count = MergeSort(arr, 0, n-1); ///DivAndCon is a function which runs merge sort(a divide and conquer process)
-
-    printf("The count inversion : %d", count);
+    
+    printf("\nPrinting the sorted array: ");
+    for(int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+    
+    printf("\nThe count inversion : %d", count);
 }
