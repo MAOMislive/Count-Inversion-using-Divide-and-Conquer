@@ -9,7 +9,7 @@ Familiarity with programming in a language of your choice (the code provided is 
   
 # Usage
 Clone the repository to your local machine.  
-git clone https://github.com/maomislive/Count-Inversion-using-Divide-and-Conquer.git  
+```git clone https://github.com/maomislive/Count-Inversion-using-Divide-and-Conquer.git```  
 Open the code file in your preferred development environment.  
 Provide the input array in the appropriate section of the code.  
 Run the code.  
