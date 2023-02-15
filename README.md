@@ -1,11 +1,11 @@
-# Count-Inversion-using-Divide-and-Conquer-Approach
+# Count Inversion using Divide and Conquer Approach
 
 This repository contains code for counting the number of inversions in an array using a divide and conquer approach based on the merge sort algorithm. In an inversion, a pair of elements in the array are out of order. The code calculates the total number of such inversions in the array.
 
 # Prerequisites
 * A basic understanding of merge sort algorithm.  
 * Knowledge of divide and conquer algorithms.  
-* Familiarity with programming in a language of your choice (the code provided is in Python)  
+* Familiarity with programming in a language of your choice (the code provided is in C)  
   
 # Usage
 * Clone the repository to your local machine.  
